@@ -1,0 +1,12 @@
+<form [formGroup]="userService.form" (submit)="onUpdate()">
+   <input type="hidden" formControlName="id">
+   <input type="hidden" formControlName="avatar">
+    <mat-form-field>
+        <input formControlName="first_name" matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input formControlName="last_name" matInput placeholder="last name">
+    </mat-form-field>
+<br>
+    <button mat-button type="submit" color="primary">Update</button>
+</form>

@@ -1,0 +1,45 @@
+
+<table class="table">
+
+    <thead>
+<th>Avatar</th>
+<th>Name</th>
+<th>Surname</th>
+<th></th>
+<th></th>
+<th></th>
+    </thead>
+    <tr *ngFor="let item of userService.userData">
+       
+            <td>
+              
+                <img src="{{item.avatar}}" alt=""></td>
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_name}}</td>
+           
+        
+        <td>
+            <button (click)="edit(item)" mat-icon-button>
+                <mat-icon> edit</mat-icon>
+            </button>
+        </td>
+        <td>
+            <button (click)="delete(item.id)" mat-icon-button>
+                <mat-icon> delete</mat-icon>
+            </button>
+        </td>
+        <td>
+            <button (click)="view(item)" mat-icon-button>
+                view
+            </button>
+        </td>
+    </tr>
+  
+</table>
+<button (click)="decrement()" mat-icon-button>
+    <mat-icon> format_indent_decrease</mat-icon>
+</button>
+<input type="text"   [(ngModel)]="pageNo">
+<button (click)="increment()" mat-icon-button>
+    <mat-icon> format_indent_increase</mat-icon>
+</button>
